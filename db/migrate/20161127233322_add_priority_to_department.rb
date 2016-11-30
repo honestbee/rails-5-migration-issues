@@ -1,4 +1,4 @@
-class AddPriorityToDepartment < ActiveRecord::Migration[5.0]
+class AddPriorityToDepartment < ActiveRecord::Migration
   def change
     add_column :departments, :priority, :integer
   end

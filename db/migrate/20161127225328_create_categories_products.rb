@@ -1,4 +1,4 @@
-class CreateCategoriesProducts < ActiveRecord::Migration[5.0]
+class CreateCategoriesProducts < ActiveRecord::Migration
   def change
     create_join_table :products, :categories
   end

@@ -1,4 +1,4 @@
-class AddPriorityToCategory < ActiveRecord::Migration[5.0]
+class AddPriorityToCategory < ActiveRecord::Migration
   def change
     add_column :categories, :priority, :integer
   end
