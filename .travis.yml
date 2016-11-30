@@ -1,0 +1,10 @@
+language: ruby
+before_script: bundle exec rake db:create db:migrate
+script: bundle exec rake
+
+gemfile:
+  - r4_gems.rb
+  - r5_gems.rb
+
+rvm:
+  - 2.3.1
