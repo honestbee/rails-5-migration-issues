@@ -9,6 +9,7 @@ describe Department do
     ]
   end
   it 'updates category associations' do
+    # https://github.com/globalize/globalize/issues/478
     @product = Product.create
     @product.categories = @categories
     @product.save!
