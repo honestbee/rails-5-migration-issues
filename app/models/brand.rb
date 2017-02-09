@@ -6,5 +6,9 @@ class Brand < ActiveRecord::Base
                       attributes: [
                           :name
                       ]
+  scope :update_scope, -> do
+    unscope(:includes, :order).with_translations
+  end
+
   default_scope { includes(:translations).order(display_order: :asc, id: :asc) }
 end
