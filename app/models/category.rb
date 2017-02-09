@@ -7,5 +7,9 @@ class Category < ActiveRecord::Base
                           :title
                       ]
 
-  default_scope -> { includes(:translations).references(:translations).order(priority: :asc, title: :asc) }
+  default_scope -> do
+    includes(:translations).
+        references(:translations).
+        order('categories.priority asc, category_translations.title asc')
+  end
 end
