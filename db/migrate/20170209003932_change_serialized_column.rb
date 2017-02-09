@@ -1,4 +1,4 @@
-class ChangeSerializedColumn < ActiveRecord::Migration[5.0]
+class ChangeSerializedColumn < ActiveRecord::Migration
   def up
     change_column(
         :product_translations, :description,
